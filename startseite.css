@@ -1,0 +1,50 @@
+ 
+#startseite {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+ 
+.hero {
+  flex: 1;
+  position: relative;
+  background-image: url(programmcode.jpg);
+  background-size: cover;
+  background-position: center;
+}
+ 
+.hero h1 {
+  position: absolute;
+  top: 20%;
+  left: 2rem;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  color: #f7f7f5;
+  font-family: 'Tilt Warp', sans-serif;
+  font-size: 50px;
+}
+ 
+.hero-nav {
+  position: absolute;
+  top: 50%;
+  right: 7rem;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+ 
+.hero-nav a {
+  text-decoration: none;
+  color: transparent;
+  -webkit-text-stroke: 2px #f7f7f7;
+  font-size: 40px;
+  font-family: 'Tilt Warp', sans-serif;
+  text-align: center;
+}
+ 
+.hero-nav a:hover {
+  color: #f7f7f5;
+}
+ 
+ 

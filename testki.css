@@ -1,0 +1,452 @@
+ 
+/* =============================================
+   CSS GRUNDGERÜST – basierend auf Wireframes
+   ============================================= */
+/* --- Reset & Basis --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #222;
+  background-color: #fff;
+  line-height: 1.6;
+}
+/* --- Hilfselement: Bild-Platzhalter --- */
+.img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #999;
+  font-size: 1.5rem;
+}
+/* =============================================
+   NAVBAR (gilt für alle Seiten)
+   ============================================= */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 2rem;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+}
+.nav-headline {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+/* =============================================
+   SEITEN – allgemein
+   ============================================= */
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  border-bottom: 2px solid #ddd;
+}
+/* =============================================
+   FOOTER / KONTAKT-LEISTE
+   ============================================= */
+.section-footer {
+  margin-top: auto;
+  background-color: #e0e0e0;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  padding: 1.2rem;
+}
+.section-footer a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+.section-footer a:hover {
+  text-decoration: underline;
+}
+/* =============================================
+   STARTSEITE
+   ============================================= */
+#startseite {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.hero {
+  flex: 1;
+  position: relative;
+  background-image: url('programcode.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.hero h1 {
+  position: absolute;
+  top: 20%;
+  left: 2rem;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  color: #f7f7f5;
+  font-family: 'Tilt Warp', sans-serif;
+  font-size: 50px;
+}
+.hero-nav {
+  position: absolute;
+  top: 50%;
+  right: 7rem;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.hero-nav a {
+  text-decoration: none;
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+  font-size: 40px;
+  font-family: 'Tilt Warp', sans-serif;
+  text-align: center;
+}
+
+/* =============================================
+   ABOUT ME
+   ============================================= */
+.about-content {
+  display: flex;
+  gap: 2.5rem;
+  padding: 2.5rem 3rem;
+  align-items: flex-start;
+}
+/* Linke Spalte mit Bildern */
+.about-left {
+  position: relative;
+  flex: 0 0 260px;
+  min-height: 320px;
+}
+.profile-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: #d0d0d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -50%);
+}
+.small-img {
+  width: 50px;
+  height: 50px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+.small-img.top-left    { top: 0;    left: 20px; }
+.small-img.mid-left    { top: 90px; left: 0; }
+.small-img.bottom-left { bottom: 0; left: 20px; }
+/* Rechte Spalte */
+.about-right {
+  flex: 1;
+}
+.about-right h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+}
+.about-right p {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+.tags {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: #d0d0d0;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-align: center;
+}
+/* Arbeitsort */
+.arbeitsort-section {
+  display: flex;
+  gap: 2rem;
+  padding: 1.5rem 3rem 2rem;
+  align-items: flex-start;
+}
+.arbeitsort-left {
+  flex: 0 0 200px;
+}
+.arbeitsort-left h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+.video-placeholder {
+  width: 200px;
+  height: 220px;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: #666;
+  font-size: 0.9rem;
+}
+.arbeitsort-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  min-height: 220px;
+  gap: 0.75rem;
+}
+.arbeitsort-adresse {
+  font-size: 0.85rem;
+  color: #555;
+  text-align: right;
+}
+.logo-placeholder {
+  width: 160px;
+  height: 45px;
+  background-color: #d0d0d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #555;
+}
+/* =============================================
+   FÄHIGKEITEN
+   ============================================= */
+.skills-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  background-color: #e0e0e0;
+}
+.skills-hero h1 {
+  font-size: 2.2rem;
+  color: #222;
+}
+.skills-hero-img {
+  width: 80px;
+  height: 60px;
+  background-color: #bbb;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Zwei Spalten */
+.skills-grid {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 3rem;
+}
+.skills-box {
+  border-radius: 4px;
+  padding: 1.25rem;
+}
+.skills-box h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.skills-list-box {
+  flex: 0 0 200px;
+  border: 1px solid #aaa;
+  background-color: transparent;
+}
+.skills-list-box ul {
+  list-style: none;
+  padding: 0;
+}
+.skills-list-box ul li {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.9rem;
+  color: #444;
+}
+.skills-list-box ul li:last-child {
+  border-bottom: none;
+}
+.skills-bar-box {
+  flex: 1;
+  background-color: #d5d5d5;
+}
+.bar-placeholder {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 2rem;
+}
+.skills-description {
+  padding: 0 3rem 2rem;
+}
+.skills-description p {
+  font-size: 0.9rem;
+  color: #555;
+  max-width: 700px;
+}
+/* =============================================
+   PORTFOLIO
+   ============================================= */
+.portfolio-content {
+  flex: 1;
+  padding: 2.5rem 3rem;
+}
+.portfolio-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+.portfolio-grid {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.portfolio-card {
+  flex: 1 1 200px;
+  max-width: 240px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.portfolio-img {
+  width: 100%;
+  height: 160px;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio-card p {
+  padding: 0.75rem;
+  font-size: 0.85rem;
+  color: #444;
+  text-align: center;
+}
+/* =============================================
+   KONTAKT
+   ============================================= */
+.kontakt-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1.25rem 3rem;
+  background-color: #e0e0e0;
+}
+.kontakt-label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  color: #333;
+}
+.kontakt-adresse {
+  font-size: 0.85rem;
+  color: #444;
+}
+.kontakt-formular-wrapper {
+  flex: 1;
+  padding: 2rem 3rem;
+}
+.kontakt-formular-wrapper h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.25rem;
+  color: #222;
+}
+.formular-box {
+  background-color: #ddd;
+  border-radius: 4px;
+  padding: 2rem;
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form-row {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.form-group.full-width {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.form-group label {
+  font-size: 0.85rem;
+  color: #333;
+  white-space: nowrap;
+}
+.form-group input {
+  padding: 0.3rem 0.5rem;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  background-color: #f5f5f5;
+  width: 150px;
+}
+.form-group textarea {
+  padding: 0.5rem;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  background-color: #f5f5f5;
+  width: 100%;
+  resize: vertical;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: 2px solid #888;
+  outline-offset: 1px;
+}
+ 
+ 
